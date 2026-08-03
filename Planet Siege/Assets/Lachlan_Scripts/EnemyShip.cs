@@ -8,10 +8,13 @@ public class EnemyShip : MonoBehaviour
     private GameObject player;
     private Vector2 faceDirection;
 
+    private HealthSystemAttribute healthSys;
+
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        healthSys = GetComponent<HealthSystemAttribute>();
     }
 
     private void FixedUpdate()

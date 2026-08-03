@@ -21,6 +21,8 @@ public class SpaceShipHealthManager : MonoBehaviour
     [Header("Damage Feedback")]
     [SerializeField] private ParticleSystem damageFeedbackEffect;
 
+    private ObjectShooter shooter;
+
     private void Start()
     {
         currentHealth = maxHealth;

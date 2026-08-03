@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb970c45b40bb4652a8310660a03dfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 3
 --- !u!114 &6335862679842211570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dffc620b41269374eb93417234093f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPickupPrefab: {fileID: 0}
+  healthPickupPrefab: {fileID: 7069317859563996594, guid: 05329d2bbfb024b41a138ef5edd01693,
+    type: 3}
   healthPickupSpawnChance: 1
 --- !u!114 &1637842962978134061
 MonoBehaviour:
