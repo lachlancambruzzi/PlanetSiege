@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/UnityTechnologies/Playground/Examples/Roguelike/Roguelike.unity
     guid: ad15a26015e49439387b05c22fe7a962
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 96f2e49357d2a9b499a5244df8c16623
+  - enabled: 1
     path: Assets/Scenes/PlanetSiege.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
