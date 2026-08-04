@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 8855639255684684066}
   - component: {fileID: 4322516457588806804}
   - component: {fileID: -8838999967509271805}
-  - component: {fileID: 870536084908218247}
   - component: {fileID: 7294684522445535271}
   - component: {fileID: 4508524743573256276}
   m_Layer: 0
@@ -273,18 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestruction: 15
---- !u!114 &870536084908218247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8633256702614905978}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abd92e4bc000c7f4a8e08ee776ee0d68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7294684522445535271
 MonoBehaviour:
   m_ObjectHideFlags: 0

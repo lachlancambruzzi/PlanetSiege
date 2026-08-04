@@ -29,6 +29,8 @@ public class Asteroid : MonoBehaviour
             TrySpawnHealthPickup();
             Destroy(collision.gameObject); // Destroy the bullet
             Destroy(gameObject);           // Destroy the asteroid
+
+            GameManager.instance.gameSoundPlayer.PlayMeteorSound();
         }
     }
 

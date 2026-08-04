@@ -10,11 +10,25 @@ public class EnemyShip : MonoBehaviour
 
     private HealthSystemAttribute healthSys;
 
+    private Rigidbody2D rb;
+
+    [SerializeField] private float moveSpeed;
+
+    private AudioSource hitSound;
+
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         healthSys = GetComponent<HealthSystemAttribute>();
+
+        Debug.Log(healthSys.health);
+
+        rb = GetComponent<Rigidbody2D>();
+
+        rb.linearVelocityY = moveSpeed;
+
+        hitSound = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -45,10 +59,18 @@ public class EnemyShip : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("✅ Asteroid hit by bullet.");
-            TrySpawnHealthPickup();
+            
             Destroy(collision.gameObject); // Destroy the bullet
-            Destroy(gameObject);           // Destroy the asteroid
+
+            Debug.Log(healthSys.health);
+
+            if(healthSys.health <= 0)
+            {
+                TrySpawnHealthPickup();
+                GameManager.instance.gameSoundPlayer.PlayEnemyShipExplodeSound();
+            }
+
+            hitSound.Play();
         }
     }
 
@@ -63,17 +85,17 @@ public class EnemyShip : MonoBehaviour
         }
 
         float chance = Random.value;
-        Debug.Log("🎲 Random value: " + chance + " | Spawn threshold: " + healthPickupSpawnChance);
+        //Debug.Log("🎲 Random value: " + chance + " | Spawn threshold: " + healthPickupSpawnChance);
 
         if (chance < healthPickupSpawnChance)
         {
             Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, 0); // Force Z = 0
             GameObject spawnedPickup = Instantiate(healthPickupPrefab, spawnPos, Quaternion.identity);
-            Debug.Log("✅ Health pickup spawned at: " + spawnedPickup.transform.position);
+            //Debug.Log("✅ Health pickup spawned at: " + spawnedPickup.transform.position);
         }
         else
         {
-            Debug.Log("⛔ Health pickup NOT spawned (chance too low).");
+            //Debug.Log("⛔ Health pickup NOT spawned (chance too low).");
         }
     }
 }
