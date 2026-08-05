@@ -5,6 +5,16 @@ public class Asteroid : MonoBehaviour
     public GameObject healthPickupPrefab;
     public float healthPickupSpawnChance = 0.3f; // 30% chance
 
+    private Rigidbody2D rb;
+    [SerializeField] private float moveSpeed;
+
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocityY = moveSpeed;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Earth"))

@@ -9,11 +9,17 @@ public class ObjectSpawner : MonoBehaviour
 
     [Header("Spawn Rate Control")]
     public float initialSpawnInterval = 2f;             // Time between spawns at the start
-    public float minSpawnInterval = 0.2f;               // Fastest spawn interval
+    public float minSpawnInterval = 1.2f;               // Fastest spawn interval
     public float difficultyRampTime = 60f;              // Time over which the spawn rate speeds up
+
+    public float currentSpawnInterval;
+    [SerializeField] private bool printInterval;
+
+    private float elapsedTime = 0;
 
     void Start()
     {
+        currentSpawnInterval = initialSpawnInterval;
         StartCoroutine(SpawnObjects()); // Start the spawning loop
     }
 
@@ -22,11 +28,11 @@ public class ObjectSpawner : MonoBehaviour
         while (true)
         {
             // Calculate time since game start
-            float elapsedTime = Time.time;
+            //elapsedTime = Time.time;
 
             // Interpolate spawn interval based on how long the game has been running
             float t = Mathf.Clamp01(elapsedTime / difficultyRampTime);
-            float currentSpawnInterval = Mathf.Lerp(initialSpawnInterval, minSpawnInterval, t);
+            currentSpawnInterval = Mathf.Lerp(initialSpawnInterval, minSpawnInterval, t);
 
             SpawnObject();
             yield return new WaitForSeconds(currentSpawnInterval);
@@ -53,5 +59,17 @@ public class ObjectSpawner : MonoBehaviour
         // Draw the spawn area box in the scene view for visual debugging
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position, spawnAreaSize);
+    }
+
+    private void Update()
+    {
+        elapsedTime += Time.deltaTime;
+
+        if (printInterval)
+        {
+            Debug.Log("interval: " + currentSpawnInterval);
+        }
+
+        //Debug.Log(Time.time + " + " + elapsedTime);
     }
 }

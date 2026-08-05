@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6477714921089936001}
   - component: {fileID: 8609385420450002957}
   - component: {fileID: 1906566525818227146}
-  - component: {fileID: 4381073165709620140}
+  - component: {fileID: 1537638855948201785}
   - component: {fileID: -9039798433186870747}
   - component: {fileID: 8855639255684684066}
   - component: {fileID: 4322516457588806804}
@@ -118,8 +118,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!60 &4381073165709620140
-PolygonCollider2D:
+--- !u!58 &1537638855948201785
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,59 +152,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.86, y: 1.28}
-    newSize: {x: 0.86, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.42999998, y: -0.01}
-      - {x: 0.39, y: 0.04}
-      - {x: 0.32999998, y: 0.16}
-      - {x: 0.26999998, y: 0.17999999}
-      - {x: 0.26999998, y: 0.39999998}
-      - {x: 0.22, y: 0.47}
-      - {x: 0.17999999, y: 0.48999998}
-      - {x: 0.22, y: 0.64}
-      - {x: 0.089999996, y: 0.64}
-      - {x: 0.049999997, y: 0.59999996}
-      - {x: -0.07, y: 0.42}
-      - {x: -0.14, y: 0.34}
-      - {x: -0.32, y: 0}
-      - {x: -0.37, y: -0.06}
-      - {x: -0.42999998, y: -0.13}
-      - {x: -0.42999998, y: -0.35}
-      - {x: -0.39, y: -0.39999998}
-      - {x: -0.26999998, y: -0.52}
-      - {x: -0.12, y: -0.59}
-      - {x: 0.03, y: -0.64}
-      - {x: 0.26999998, y: -0.64}
-      - {x: 0.39, y: -0.48}
-      - {x: 0.42999998, y: -0.41}
-    - - {x: 0.29999998, y: 0.35}
-      - {x: 0.28, y: 0.32999998}
-      - {x: 0.28, y: 0.26999998}
-      - {x: 0.29999998, y: 0.25}
-      - {x: 0.35999998, y: 0.25}
-      - {x: 0.38, y: 0.26999998}
-      - {x: 0.38, y: 0.32999998}
-      - {x: 0.35999998, y: 0.35}
-    - - {x: -0.26, y: 0.41}
-      - {x: -0.26, y: 0.31}
-      - {x: -0.16, y: 0.31}
-      - {x: -0.16, y: 0.41}
-    - - {x: -0.14, y: 0.64}
-      - {x: -0.14, y: 0.57}
-      - {x: -0.12, y: 0.55}
-      - {x: -0.04, y: 0.55}
-      - {x: -0.04, y: 0.64}
-  m_UseDelaunayMesh: 0
+  m_Offset: {x: 0, y: -0.06411761}
+  m_Radius: 0.5758824
 --- !u!50 &-9039798433186870747
 Rigidbody2D:
   serializedVersion: 5
@@ -213,7 +162,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8633256702614905978}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -286,7 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPickupPrefab: {fileID: 7069317859563996594, guid: 05329d2bbfb024b41a138ef5edd01693,
     type: 3}
-  healthPickupSpawnChance: 1
+  healthPickupSpawnChance: 0.3
+  moveSpeed: -2.95
 --- !u!114 &4508524743573256276
 MonoBehaviour:
   m_ObjectHideFlags: 0

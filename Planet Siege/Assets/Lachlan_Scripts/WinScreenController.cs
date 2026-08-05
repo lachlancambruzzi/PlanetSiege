@@ -33,6 +33,6 @@ public class WinScreenController : MonoBehaviour
         Time.timeScale = 1f;
 
         // Reload the current active scene to restart game
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
