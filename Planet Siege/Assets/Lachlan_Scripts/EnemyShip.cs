@@ -41,21 +41,13 @@ public class EnemyShip : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Earth"))
         {
-            /*
-            // Get the EarthHealthManager from the object we hit
             EarthHealthManager healthManager = collision.gameObject.GetComponent<EarthHealthManager>();
             if (healthManager != null)
             {
                 healthManager.TakeDamage(10); // Apply damage
-                Debug.Log("✅ Asteroid hit Earth and applied damage.");
-            }
-            else
-            {
-                Debug.LogWarning("⚠️ EarthHealthManager not found on Earth object!");
             }
 
             Destroy(gameObject); // Destroy the asteroid
-            */
         }
         else if (collision.gameObject.CompareTag("Bullet"))
         {

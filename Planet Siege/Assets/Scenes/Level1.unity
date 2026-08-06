@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 156991304}
   m_Layer: 8
   m_Name: Barrier_Top
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -891,7 +891,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -58}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 183.726, y: 33.8268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203575113
 MonoBehaviour:
@@ -1335,7 +1335,7 @@ GameObject:
   - component: {fileID: 225155282}
   m_Layer: 8
   m_Name: Barrier_Right
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1729,6 +1729,74 @@ RectTransform:
   m_AnchoredPosition: {x: -75, y: 80}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &427866898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2167345772428868396, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.9837513
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.474374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214032848824301156, guid: fe394e74c3288b745a9e60b56e548e8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe394e74c3288b745a9e60b56e548e8d, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,7 +2063,7 @@ GameObject:
   - component: {fileID: 574466927}
   m_Layer: 0
   m_Name: Barriers
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2056,7 +2124,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000819515af
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2409,7 +2477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Replay
+  m_text: Next Mission
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2547,7 +2615,7 @@ GameObject:
   - component: {fileID: 1006161508}
   m_Layer: 8
   m_Name: Barrier_Left
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8256,7 +8324,7 @@ GameObject:
   - component: {fileID: 1959886159}
   m_Layer: 8
   m_Name: Barrier_Bottom
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8915,7 +8983,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 063cc7f88a09c8f49a57b8fb54dc817a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8934,7 +9002,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145232093
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.13999999, y: 0.13999999, z: 0}
@@ -19877,3 +19945,4 @@ SceneRoots:
   - {fileID: 1130067553}
   - {fileID: 1207862479}
   - {fileID: 1492138575}
+  - {fileID: 427866898}

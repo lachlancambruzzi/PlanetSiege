@@ -11,6 +11,7 @@ TagManager:
   - Pickup
   - HealthPickup
   - Earth
+  - Barrier
   layers:
   - Default
   - TransparentFX
@@ -22,8 +23,8 @@ TagManager:
   - SpaceShip
   - Barrier
   - Background
-  - 
-  - 
+  - Enemy Projectile
+  - Enemy
   - 
   - 
   - 
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Gameplay
     uniqueID: 1087635889
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2937427329
     locked: 0
   m_RenderingLayers:
   - Default

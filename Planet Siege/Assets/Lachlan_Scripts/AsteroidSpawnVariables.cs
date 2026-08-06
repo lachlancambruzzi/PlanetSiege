@@ -64,12 +64,5 @@ public class ObjectSpawner : MonoBehaviour
     private void Update()
     {
         elapsedTime += Time.deltaTime;
-
-        if (printInterval)
-        {
-            Debug.Log("interval: " + currentSpawnInterval);
-        }
-
-        //Debug.Log(Time.time + " + " + elapsedTime);
-    }
+    }   
 }

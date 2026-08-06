@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] private int damageAmount = 10;
+
+    public UnityEvent playerHit;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,6 +20,8 @@ public class EnemyDamage : MonoBehaviour
                 // Apply damage
                 healthManager.TakeDamage(damageAmount);
             }
+
+            playerHit.Invoke();
         }
     }
 }
